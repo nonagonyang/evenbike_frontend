@@ -6,6 +6,7 @@ import Navigation from "./Navigation";
 import Homepage from "./Homepage";
 import Profile from "./Profile";
 import SearchDocks from "./SearchDocks";
+import SearchDocks2 from "./SearchDocks2";
 import ListOfDocks from "./ListOfDocks";
 import TripPreview from "./TripPreview";
 import BikeQR from "./BikeQR";
@@ -13,6 +14,7 @@ import TripStart from "./TripStart";
 import TripSummary from "./TripSummary";
 import RegisterForm from "./RegisterForm";
 import LoginForm from "./LoginForm";
+import AutoComplete from "./AutoComplete";
 
 function App() {
   const [dockOptions, setDockOptions] = useState([]);
@@ -63,6 +65,7 @@ function App() {
   }
 
   async function getDockOptions(coord, type) {
+    console.log("coord", coord, "type", type);
     const docks = await EvenBikeApi.getDockOptions(coord, type);
     setDockOptions(docks);
   }
@@ -103,9 +106,10 @@ function App() {
             element={<RegisterForm register={register} />}
           />
           <Route path="/login" element={<LoginForm login={login} />} />
+          <Route path="/autocomplete" element={<AutoComplete />} />
           <Route
             path="/trip/select/:type"
-            element={<SearchDocks getDockOptions={getDockOptions} />}
+            element={<SearchDocks2 getDockOptions={getDockOptions} />}
           />
           <Route
             path="/trip/docks/:type"

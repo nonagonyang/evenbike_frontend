@@ -3,7 +3,6 @@ function TripSummary({ currentTrip }) {
     <>
       <h2>TripSummary Page</h2>
       <ul>
-        <li>id:{currentTrip.id}</li>
         <li>From:{currentTrip.start_dock.split(",")[1]}</li>
         <li>Start Time:{currentTrip.start_time}</li>
         <li>To:{currentTrip.end_dock.split(",")[1]}</li>

@@ -15,10 +15,10 @@ function TripStart({ currentTrip, endDock, tripEnd, updateCurrentTrip }) {
       <h2>TripStart Page</h2>
       {currentTrip ? (
         <ul>
-          <li>Your Trip has started</li>
-          <li>{currentTrip.id}</li>
-          <li>{currentTrip.start_dock}</li>
-          <li>{currentTrip.start_time}</li>
+          <p>
+            {currentTrip.start_time} Your Trip has started from{" "}
+            {currentTrip.start_dock.split(",")[1]}
+          </p>
         </ul>
       ) : (
         ""

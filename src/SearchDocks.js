@@ -1,4 +1,5 @@
 /**Reuse this component for start and end */
+/**Has Google Address Auto Complete feature */
 
 import React, { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";

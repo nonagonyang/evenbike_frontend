@@ -5,7 +5,7 @@ class EvenBikeApi {
   // the token for interactive with the API will be stored here.
   static token;
   static async request(endpoint, data = {}, method = "get") {
-    console.debug("API Call:", endpoint, data, method);
+    console.debug("API Call:", endpoint, method);
 
     const url = `${BASE_URL}/${endpoint}`;
     const headers = { Authorization: `Bearer ${EvenBikeApi.token}` };
@@ -27,7 +27,7 @@ class EvenBikeApi {
   /** Get recommended bike docks based on a given location. */
 
   static async getDockOptions(coordinate, type) {
-    let res = await this.request(`trip/docks/${coordinate}`);
+    let res = await this.request(`trip/docks/${JSON.stringify(coordinate)}`);
     if (type === "from") {
       res.docks.reverse();
     }
@@ -35,7 +35,6 @@ class EvenBikeApi {
   }
 
   static async startTrip(startDock, startTime) {
-    // console.log("api.js", startDock, startTime);
     const start_dock = startDock;
     const start_time = startTime;
     let res = await this.request(
@@ -49,7 +48,6 @@ class EvenBikeApi {
   static async endTrip(endDock, endTime, tripId) {
     const end_dock = endDock;
     const end_time = endTime;
-    // console.log("api.js", end_dock, end_time, tripId);
     let res = await this.request(
       `trip/end/${tripId}`,
       { end_dock, end_time },

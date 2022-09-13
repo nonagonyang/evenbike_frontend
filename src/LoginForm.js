@@ -26,7 +26,7 @@ function LoginForm({ login }) {
         <label htmlFor="username">Username</label>
         <input name="username"></input>
         <label htmlFor="password">Password</label>
-        <input name="password"></input>
+        <input name="password" type="password" autoComplete="on"></input>
         <button>Login</button>
       </form>
     </>

@@ -18,6 +18,10 @@ function Profile({ loggedinUser, currentUser, userTrips, getTrips }) {
       <p>Eco_points:{currentUser.eco_points}</p>
       <p>Active_points:{currentUser.active_points}</p>
       <p>Total_points:{currentUser.total_points}</p>
+      <p>Eco_level: {currentUser.eco_level}</p>
+      <p>Active_level: {currentUser.active_level}</p>
+      <p>Overall_level: {currentUser.overall_level}</p>
+
       <h2>Trip History</h2>
       <button onClick={handleClick}>
         {show ? "Hide Trip History" : "Show Trip History"}
@@ -27,7 +31,9 @@ function Profile({ loggedinUser, currentUser, userTrips, getTrips }) {
           {userTrips.map((trip) => {
             return (
               <div key={trip.id}>
-                <p>{trip.start_time}</p>
+                <p>
+                  {trip.start_time} --- {trip.end_time}
+                </p>
                 <p>from: {trip.start_dock.split(",")[1]}</p>
                 <p>to: {trip.end_dock.split(",")[1]}</p>
               </div>
