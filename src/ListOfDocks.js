@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import "./ListOfDocks.css";
+import Button from "@mui/material/Button";
 
 function ListOfDocks({ dockOptions, updateStartDock, updateEndDock }) {
   let navigate = useNavigate();
@@ -25,32 +26,52 @@ function ListOfDocks({ dockOptions, updateStartDock, updateEndDock }) {
 
   return (
     <>
-      <form onSubmit={handleSubmit} onChange={handleChange}>
-        <label htmlFor="select">Select a Dock</label>
-        <select name="select">
+      <h3>Choose A Greener Dock to Earn More Eco Points</h3>
+      <div className="Docks_Container">
+        <form
+          onSubmit={handleSubmit}
+          onChange={handleChange}
+          className="Docks_Form"
+        >
           {dockOptions.map((dock, index) => {
             return (
-              <option
-                key={dock.id}
-                value={[
-                  dock.id,
-                  dock.name,
-                  parseFloat(dock.occupancy).toFixed(2),
-                  dock.lat,
-                  dock.lon,
-                  dock.numBikes,
-                ]}
-                className="dockOption"
-              >
-                {dock.name}
-                {dock.numBikes} bikes available
-                {parseFloat(dock.occupancy).toFixed(2)}
-              </option>
+              <div className={index < 3 ? "Docks_Green" : "Docks"} key={index}>
+                <input
+                  type="radio"
+                  id={index}
+                  name="dock"
+                  value={[
+                    dock.id,
+                    dock.name,
+                    parseFloat(dock.occupancy).toFixed(2),
+                    dock.lat,
+                    dock.lon,
+                    dock.numBikes,
+                  ]}
+                ></input>
+                &nbsp; &nbsp;
+                <label htmlFor={dock.name}>
+                  {dock.name}
+                  &nbsp; &nbsp;
+                  <span className="material-icons">directions_bike</span>
+                  &nbsp;&nbsp;
+                  {parseFloat(dock.occupancy).toFixed(2)}
+                </label>
+                <br></br>
+              </div>
             );
           })}
-        </select>
-        <button>Next</button>
-      </form>
+
+          <br></br>
+          <Button
+            onClick={handleSubmit}
+            variant="contained"
+            className="Docks_Button"
+          >
+            Next
+          </Button>
+        </form>
+      </div>
     </>
   );
 }

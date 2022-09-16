@@ -5,6 +5,8 @@ import PlacesAutocomplete, {
   geocodeByAddress,
   getLatLng,
 } from "react-places-autocomplete";
+import SearchIcon from "@mui/icons-material/Search";
+import "./SearchDocks2.css";
 
 function SearchDocks2({ getDockOptions }) {
   let { type } = useParams();
@@ -26,10 +28,6 @@ function SearchDocks2({ getDockOptions }) {
     const docks = await getDockOptions(coord, type);
     setCoord("");
     navigate(`/trip/docks/${type}`);
-    if (docks) {
-      setCoord("");
-      navigate(`/trip/docks/${type}`);
-    }
   }
 
   return (
@@ -40,15 +38,24 @@ function SearchDocks2({ getDockOptions }) {
         onSelect={handleSelect}
       >
         {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
-          <div>
-            <label>Search Place:</label>
-            <input
-              {...getInputProps({
-                placeholder: "Search Places ...",
-                className: "location-search-input",
-              })}
-            />
-            <div className="autocomplete-dropdown-container">
+          <div className="SearchDocks_Container">
+            <h2>Cycling {type}:</h2>
+            <div className="SearchDocks_Search">
+              <input
+                {...getInputProps({
+                  placeholder: "Search Places ...",
+                  className: "SearchDocks_SearchInput",
+                })}
+              />
+              <button
+                className="SearchDocks_SearchButton"
+                onClick={handleSubmit}
+              >
+                <span className="material-icons">search</span>
+              </button>
+            </div>
+
+            <div className="SearchDocks_Dropdown_Containter">
               {loading && <div>Loading...</div>}
               {suggestions.map((suggestion, index) => {
                 const className = suggestion.active
@@ -74,7 +81,6 @@ function SearchDocks2({ getDockOptions }) {
           </div>
         )}
       </PlacesAutocomplete>
-      <button onClick={handleSubmit}>Next</button>
     </>
   );
 }

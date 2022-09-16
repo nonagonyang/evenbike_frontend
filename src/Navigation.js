@@ -13,7 +13,7 @@ function Navigation({ token, logout, loggedinUser }) {
         {token ? (
           <ul className="navbar-nav">
             <li className="nav-item">
-              <NavLink className="nav-link" to="/">
+              <NavLink className="nav-link" to="/home">
                 Home
               </NavLink>
             </li>
@@ -29,7 +29,7 @@ function Navigation({ token, logout, loggedinUser }) {
             </li>
             <li>Welcome {loggedinUser}!</li>
             <li>
-              <NavLink className="nav-link" to="/" onClick={handleClick}>
+              <NavLink className="nav-link" to="/home" onClick={handleClick}>
                 Logout
               </NavLink>
             </li>

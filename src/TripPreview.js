@@ -40,7 +40,6 @@ function TripPreview({ startDock, endDock, tripOngoing }) {
         onClick={() => {
           navigate("/trip/scan");
         }}
-        disabled={tripOngoing}
       >
         Scan a QR code to start the trip
       </button>

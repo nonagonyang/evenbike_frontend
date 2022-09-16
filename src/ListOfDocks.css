@@ -1,1 +1,46 @@
+.Docks {
+  border: 1px solid #8d97d0;
+  border-radius: 0 5px 5px 0;
+  left: 50%;
+  font-weight: bold;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  padding: 5px;
+  color: darkgreen;
+  margin-top: 1px;
+  width: 50%;
+  position: center;
+  font-size: 20px;
+  background-color: lightgray;
+}
 
+.Docks_Form {
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+}
+/* .Docks_Container{
+  
+    height: 200px;
+    background: #CCCCCC;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+.Docks_Green {
+  border: 1px solid #8d97d0;
+  border-radius: 0 5px 5px 0;
+  left: 50%;
+  font-weight: bold;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  padding: 5px;
+  color: darkgreen;
+  margin-top: 1px;
+  width: 50%;
+  position: center;
+  font-size: 20px;
+  background-color: lightgreen;
+}
