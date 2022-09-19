@@ -19,7 +19,7 @@ function Profile({ loggedinUser, currentUser, userTrips, getTrips }) {
       <div className="content-profile-page">
         <div className="profile-user-page card">
           <div className="img-user-profile">
-            <img className="profile-bgHome" src={bike} />
+            <img className="profile-bgHome" src={bike} alt="" />
             <img className="avatar" src={Walle} alt="Universal Avatar" />
           </div>
           <button onClick={handleClick}>
@@ -31,19 +31,19 @@ function Profile({ loggedinUser, currentUser, userTrips, getTrips }) {
 
           <ul className="data-user">
             <li>
-              <a>
+              <a href="">
                 <strong>{currentUser.eco_points}</strong>
                 <span>Eco Points</span>
               </a>
             </li>
             <li>
-              <a>
+              <a href="">
                 <strong>{currentUser.active_points}</strong>
                 <span>Active Points</span>
               </a>
             </li>
             <li>
-              <a>
+              <a href="">
                 <strong>{currentUser.overall_level}</strong>
                 <span>Overall Level</span>
               </a>
@@ -51,8 +51,6 @@ function Profile({ loggedinUser, currentUser, userTrips, getTrips }) {
           </ul>
 
           <div className="img-user-profile">
-            {/* <img class="profile-bgHome" src={bike} />
-            <img class="avatar" src={Walle} alt="Universal Avatar" /> */}
             {show ? (
               <div>
                 {userTrips.map((trip) => {

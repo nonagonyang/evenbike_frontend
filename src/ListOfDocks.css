@@ -1,17 +1,19 @@
 .Docks {
-  border: 1px solid #8d97d0;
-  border-radius: 0 5px 5px 0;
-  left: 50%;
-  font-weight: bold;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  padding: 5px;
   color: darkgreen;
-  margin-top: 1px;
-  width: 50%;
   position: center;
-  font-size: 20px;
   background-color: lightgray;
+}
+
+.Docks_Green {
+  border: 1px solid #8d97d0;
+  border-radius: 0 5px 5px 0;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: darkgreen;
+  position: center;
+  background-color: lightgreen;
 }
 
 .Docks_Form {
@@ -21,26 +23,33 @@
   top: 40%;
   transform: translate(-50%, -50%);
 }
-/* .Docks_Container{
-  
-    height: 200px;
-    background: #CCCCCC;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-} */
-.Docks_Green {
-  border: 1px solid #8d97d0;
-  border-radius: 0 5px 5px 0;
-  left: 50%;
-  font-weight: bold;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  padding: 5px;
-  color: darkgreen;
-  margin-top: 1px;
-  width: 50%;
-  position: center;
-  font-size: 20px;
-  background-color: lightgreen;
+
+.grid {
+  display: grid;
+  grid-template-columns: 300px auto;
+  grid-gap: 1em;
+  width: 100%;
+}
+
+@media all and (max-width: 700px) {
+  aside,
+  article {
+    grid-column: 1 / 4;
+  }
+}
+
+/* Demo Specific Styles */
+body {
+  margin: 0 auto;
+  max-width: 56em;
+  padding: 1em 0;
+}
+
+aside,
+article {
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 1em;
 }

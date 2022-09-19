@@ -2,19 +2,14 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import EvenBikeApi from "./api";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Navigation from "./Navigation";
 import Homepage from "./Homepage";
 import Trip from "./Trip";
 import Profile from "./Profile";
-import SearchDocks from "./SearchDocks";
 import SearchDocks2 from "./SearchDocks2";
 import ListOfDocks from "./ListOfDocks";
-import TripPreview from "./TripPreview";
 import BikeQR from "./BikeQR";
 import TripStart from "./TripStart";
 import TripSummary from "./TripSummary";
-import RegisterForm from "./RegisterForm";
-import LoginForm from "./LoginForm";
 import AutoComplete from "./AutoComplete";
 import NotFound from "./NotFound";
 
@@ -22,8 +17,6 @@ import NotFound from "./NotFound";
 import NavigationTabs from "./Navigation2";
 import SignIn from "./LoginForm2";
 import SignUp from "./RegisterForm2";
-import ComboBox from "./SearchDocks3";
-import BasicStack from "./ListOfDocks2";
 import ColorsTimeline from "./TripPreview2";
 
 // Key name for storing token in localStorage for "remember me" re-login
@@ -92,16 +85,6 @@ function App() {
     },
     [token]
   );
-
-  // const fetchUserData = async (loggedinUser) => {
-  //   if (loggedinUser) {
-  //     const user = await EvenBikeApi.getUser(loggedinUser);
-  //     setCurrentUser(user);
-  //   }
-  // };
-  // useEffect(() => {
-  //   fetchUserData();
-  // }, []);
 
   async function login(userInfo) {
     const token = await EvenBikeApi.login(userInfo);
@@ -174,10 +157,7 @@ function App() {
           <Route path="*" element={<NotFound />} />
           <Route path="/home" element={<Homepage token={token} />} />
           <Route path="/trip" element={<Trip />} />
-          {/* <Route
-            path="/register"
-            element={<RegisterForm register={register} />}
-          /> */}
+
           <Route path="/register" element={<SignUp register={register} />} />
 
           {/* <Route path="/login" element={<LoginForm login={login} />} /> */}
@@ -189,10 +169,6 @@ function App() {
             path="/trip/select/:type"
             element={<SearchDocks2 getDockOptions={getDockOptions} />}
           />
-          {/* <Route
-            path="/trip/select/:type"
-            element={<ComboBox getDockOptions={getDockOptions} />}
-          /> */}
 
           <Route
             path="/trip/docks/:type"
@@ -204,27 +180,7 @@ function App() {
               />
             }
           />
-          {/* <Route
-            path="/trip/docks/:type"
-            element={
-              <BasicStack
-                dockOptions={dockOptions}
-                updateStartDock={updateStartDock}
-                updateEndDock={updateEndDock}
-              />
-            }
-          /> */}
-          {/* <Route
-            path="/trip/preview"
-            element={
-              <TripPreview
-                startDock={startDock}
-                endDock={endDock}
-                tripStart={tripStart}
-                tripOngoing={tripOngoing}
-              />
-            }
-          ></Route> */}
+
           <Route
             path="/trip/preview"
             element={

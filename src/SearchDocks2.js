@@ -5,7 +5,6 @@ import PlacesAutocomplete, {
   geocodeByAddress,
   getLatLng,
 } from "react-places-autocomplete";
-import SearchIcon from "@mui/icons-material/Search";
 import "./SearchDocks2.css";
 
 function SearchDocks2({ getDockOptions }) {
@@ -25,7 +24,7 @@ function SearchDocks2({ getDockOptions }) {
   }
   async function handleSubmit(evt) {
     evt.preventDefault();
-    const docks = await getDockOptions(coord, type);
+    await getDockOptions(coord, type);
     setCoord("");
     navigate(`/trip/docks/${type}`);
   }

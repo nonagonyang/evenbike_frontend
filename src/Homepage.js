@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import bike from "./bike.jpg";
 import "./Homepage.css";
+
 function Homepage({ token }) {
   let navigate = useNavigate();
   function handleClick() {
@@ -29,7 +30,7 @@ function Homepage({ token }) {
             <button onClick={handleClick}>Plan A Trip</button>
           </div>
           <div className="image">
-            <img src={bike}></img>
+            <img src={bike} alt=""></img>
           </div>
           <div className="clearfix"></div>
         </div>
