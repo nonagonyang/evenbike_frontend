@@ -11,17 +11,29 @@ EvenBike's display automatically adjusts to whatever screen users are accessing 
 ## Tests
 ## Userflow
 ->Signin/Register
+
 -> Plan a trip
+
 ->Select Start
+
 ->Select from recommended docks
+
 ->Select End
+
 ->Select from  recommended docks
+
 ->Preview Trip
+
 ->Scan Bike QR code
+
 ->Start Cycling
+
 ->End Cycling
+
 ->Trip Summar
+
 -> Check profile
+
 ->Logout
 
 ## API
