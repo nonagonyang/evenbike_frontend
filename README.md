@@ -1,16 +1,34 @@
-# Getting Started with Create React App
-
+# EvenBike React FrontEnd
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-##Title of the site: EvenBike
-##Deployed @ http://evenbike.surge.sh/home
-##Function of the WebApp
-##Features
-##Tests
-##Userflow
-Signin/Register-> Plan a trip->Select Start->Select from recommended docks->Select End->Select from  recommended docks->Preview Trip->Scan Bike QR code->Start Cycling->End Cycling->Trip Summar-> Check profile
-##API
-##Technology Stack
+## Deployed @ http://evenbike.surge.sh/home
+## About
+Many cities now have public bike systems. One problem with the bike sharing system is that bikes need to be redistributed usually at the end of the day to ensure enough bikes in popular locations. EvenBike enables public bike riders to help rebalance the number of bikes in each bike dock, as such to reduce the need of redistributing bikes with trucks. 
+
+## Features
+# Responsive UI design: 
+EvenBike's display automatically adjusts to whatever screen users are accessing it on. 
+## Tests
+## Userflow
+->Signin/Register
+-> Plan a trip
+->Select Start
+->Select from recommended docks
+->Select End
+->Select from  recommended docks
+->Preview Trip
+->Scan Bike QR code
+->Start Cycling
+->End Cycling
+->Trip Summar
+-> Check profile
+->Logout
+
+## API
+See evenbike_backend
+
+## Technology Stack
+React
 
 
 ## Available Scripts
