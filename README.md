@@ -2,6 +2,17 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+##Title of the site: EvenBike
+##Deployed @ http://evenbike.surge.sh/home
+##Function of the WebApp
+##Features
+##Tests
+##Userflow
+Signin/Register-> Plan a trip->Select Start->Select from recommended docks->Select End->Select from  recommended docks->Preview Trip->Scan Bike QR code->Start Cycling->End Cycling->Trip Summar-> Check profile
+##API
+##Technology Stack
+
+
 ## Available Scripts
 
 In the project directory, you can run:
