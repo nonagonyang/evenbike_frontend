@@ -37,7 +37,7 @@ EvenBike's display automatically adjusts to whatever screen users are accessing 
 ->Logout
 
 ## API
-See evenbike_backend
+https://github.com/nonagonyang/evenbike_backend
 
 ## Technology Stack
 React
