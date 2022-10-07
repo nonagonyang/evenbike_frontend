@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="landing-page"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="header-area"
+      >
+        <div
+          class="logo"
+        >
+          <b>
+            EvenBike
+          </b>
+        </div>
+      </div>
+      <div
+        class="info"
+      >
+        <h1>
+          Greener Public Bike
+        </h1>
+        <p>
+          Most public bikes have to be redistributed by trucks in the evening. Join us to help redistribute public bikes without using trucks.
+        </p>
+        <button>
+          Plan A Trip
+        </button>
+      </div>
+      <div
+        class="image"
+      >
+        <img
+          alt=""
+          src="bike.jpg"
+        />
+      </div>
+      <div
+        class="clearfix"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;

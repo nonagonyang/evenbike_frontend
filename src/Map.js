@@ -11,7 +11,7 @@ const center = {
   lng: -0.1287,
 };
 
-document.getElementById("google_map").addEventListener("load", () => {});
+// document.getElementById("google_map").addEventListener("load", () => {});
 
 const onLoad = (marker) => {
   console.log("marker: ", marker);

@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import Button from "@mui/material/Button";
 
 function BikeQR({ startDock, tripStart }) {
   let navigate = useNavigate();
@@ -13,7 +14,9 @@ function BikeQR({ startDock, tripStart }) {
   return (
     <>
       <p>link to public bike</p>
-      <button onClick={handleSubmit}>Start Biking</button>
+      <Button variant="contained" color="success" onClick={handleSubmit}>
+        Start Cycling
+      </Button>
     </>
   );
 }
